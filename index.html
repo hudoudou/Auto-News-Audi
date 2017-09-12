@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>汽车新闻</title>
+    <!-- <link rel="stylesheet" type="text/css"  href="public/css/main.css"> -->
+    <!-- <link rel="stylesheet" type="text/css"  href="public/css/main.1059f7dd9fd370a30723.css"> -->
+    <link rel="stylesheet" type="text/css"  href="fonts/icomoon.css">
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="js/velocity.ui.min.js"></script>
+    <link rel="stylesheet/less" type="text/css" href="css/style1.less">
+    <script src="js/less.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+        <a class="title" href="#">二手车</a>
+        <h1>汽车新闻</h1>
+        <a class="home" href="#">&#xe902</a>
+    </header>
+    <div id="app">
+        <!-- <router-link to="/">Go to Foo</router-link>
+        <router-link to="/view">Go to Bar</router-link> -->
+        <router-view></router-view>
+    </div>
+
+    <nav>
+        <a href=""></a>
+    </nav>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <p>留言-合作</p>
+    <p class="copyright"></p>
+    <!--<div id="app">
+      <h1>Hello App!</h1>
+      <p>-->
+        <!-- 使用 router-link 组件来导航. -->
+        <!-- 通过传入 `to` 属性指定链接. -->
+        <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+    <!--    <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/bar">Go to Bar</router-link>
+      </p>-->
+      <!-- 路由出口 -->
+      <!-- 路由匹配到的组件将渲染在这里 -->
+    <!--  <router-view></router-view>
+    </div>-->
+
+    <!-- <script type="text/javascript">
+        setTimeout(function(){
+            $('.list').velocity('transition.fadeIn')
+        },500)  //注释掉动画不会影响vue!!!
+    </script> -->
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+    <script type="text/javascript">
+        // 0. 如果使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)
+
+        // 1. 定义（路由）组件。
+        // 可以从其他文件 import 进来
+        const List = { template: 
+            `<div class="list">
+                <ul>
+                    <li>
+                        <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                       <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                       <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                       <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                       <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                       <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                       <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                       <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                       <router-link to="/view" tag='a'>
+                            <p class="title">最美自主车致尚XT竞争力分析</p>
+                            <p class="about">
+                                <span class="time">07-04 06:30</span>
+                                <span class="author">搜狐汽车</span>
+                            </p>
+                            <img class="flag" src="images/flag.png" alt="">
+                        </router-link>
+                    </li>
+                </ul>
+                <p class="loading">加载中</p>
+                <a href="#"></a>
+            </div>`
+        }
+        const View = { template: 
+            `<div class="wrapper">
+                <router-link to="/" tag='a'>返回首页</router-link>
+                <h2>奥迪A8L</h2>
+                <div class="sub">
+                    <span class="time">2017-09-12</span>
+                    <span class="author">搜狐汽车</span>
+                </div>
+                <div class="content-box">
+                    <img src="images/aodi-pic.jpg" alt="">
+                    <p class="title">奥迪A8L</p>
+                    <p class="content">
+                        奥迪A8L是德国大众汽车公司生产的汽车，是奥迪车系中最高档的豪华车[2]  ，采用全铝车身，最高时速250km/h，定位于奔驰S600及宝马7系列竞争。
+                        目前有三种车型可选，分别是准备了V6火花塞式，5气门/气缸，双顶置凸轮轴(DOHC)/气缸侧体，液压式可变配气相位，可调长度进气管发动机的A8L2.8；和装备V8火花塞式，5气门/气缸，可变几何涡轮，4气门/气缸，液压式可变配气相位，可调长度进气管发动机的A8L4，2quattroLWB；以及装备了12缸6.0排量的全铝发动机的A8L加长型。这几款车型都配备有Quattro全时四轮驱动，扭矩中心电子差速锁(EDL)，驱动控制（ASR）,电子稳定系统（ESP），液力扭矩控制式离合器，以及五挡Tiptronic手动/自动一体化变速箱。奥迪A8L为其所属系列下的最新车系。
+                        作为奥迪的旗舰，A8L并非世界上最贵的车型，但绝对是最好的车型之一。他没有在表面化的方面来显示车主的富有，他是以先进汽车技术的堆砌。特别是那台W12 6.3升发动机，可以使庞大的车身在4.7秒的时间内从0跑到100公里/小时，500马力的A8LW12，它的豪华绝对不是装装门面。也希望车主买回去不要只做乘客。
+                    </p>
+                </div>
+            </div>`
+         }
+
+        // 2. 定义路由
+        // 每个路由应该映射一个组件。 其中"component" 可以是
+        // 通过 Vue.extend() 创建的组件构造器，
+        // 或者，只是一个组件配置对象。
+        // 我们晚点再讨论嵌套路由。
+        const routes = [
+          { path: '/', component: List },
+          { path: '/view', component: View }
+        ]
+
+        // 3. 创建 router 实例，然后传 `routes` 配置
+        // 你还可以传别的配置参数, 不过先这么简单着吧。
+        const router = new VueRouter({
+          routes // （缩写）相当于 routes: routes
+        })
+
+        // 4. 创建和挂载根实例。
+        // 记得要通过 router 配置参数注入路由，
+        // 从而让整个应用都有路由功能
+        const app = new Vue({
+          router
+        }).$mount('#app')
+
+        // 现在，应用已经启动了！
+    </script>
+</body>
+</html>
